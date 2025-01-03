@@ -1,0 +1,5 @@
+<project name="TestProject" default="build" basedir=".">
+    <target name="build">
+        <echo>Building the project...</echo>
+    </target>
+</project>
