@@ -1,1 +1,1 @@
-print("Seni çok seviyorum canım Garım")
+print("Hello World!"")
