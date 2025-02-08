@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-git-app
+  labels:
+    app: python-git
+spec:
+  replicas: 1  # Tek bir pod çalıştır
+  selector:
+    matchLabels:
+      app: python-git
+  template:
+    metadata:
+      labels:
+        app: python-git
+    spec:
+      containers:
+      - name: python-git-container
+        image: 926200/jenkins:latest  # Docker Hub’daki imajın
+        command: ["tail", "-f", "/dev/null"]
+        imagePullPolicy: Always  # Her zaman en güncel imajı çek
