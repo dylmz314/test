@@ -1,4 +1,7 @@
-FROM python:3.9-slim
-COPY test.py /app/test.py
+FROM oraclelinux:8
+RUN yum update -y
+RUN yum install git python39 -y
+RUN yum clean all
+
 WORKDIR /app
-CMD ["python", "test.py"]
+RUN git clone https://github.com/dylmz314/test.git /app
